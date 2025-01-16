@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  text-align: center;
+  line-height: 1.5;
+}
+.project-wrapper__text-info .more-text {
+  display: none;
+}
+
+.project-wrapper__text-info .read-more-link {
+  color: rgb(25, 143, 254);
+  cursor: pointer;
+  text-decoration: underline;
+}
