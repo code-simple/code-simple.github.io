@@ -226,7 +226,7 @@ a:hover {
   box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #ffffff;
 }
 .cta-btn--projects:hover::after {
-  transform: translate(-12%, -30%) rotate(45deg);
+  transform: translate(-12%, -30%) rotate(30deg);
 }
 
 .footer {
@@ -393,13 +393,13 @@ section .row span {
   height: 100%;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
 }
 #about .about-wrapper__image img {
   max-width: 250px;
   max-height: 400px;
   width: 100%;
-  border-radius: 10px;
+  outline: 10px solid #ffffff;
+  outline-offset: -4px;
   filter: grayscale(110%);
 }
 @media (max-width: 75em) {
@@ -600,7 +600,7 @@ section .row span {
   }
 }
 #projects {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   color: #272341;
   margin-top: -15rem;
   padding-top: 15rem;
