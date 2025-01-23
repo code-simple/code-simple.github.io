@@ -286,6 +286,9 @@ a:hover {
 .social-links a:hover .fa-codepen {
   color: #212121;
 }
+.social-links a:hover .fa-whatsapp {
+  color: #00fd8b;
+}
 
 .back-to-top i {
   color: #ffffff;
