@@ -35,6 +35,56 @@ body {
   text-decoration: underline;
 }
 
+.tech-stack {
+  padding-bottom: 20px;
+}
+.tech-stack h6 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.tech-stack .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tech-stack .tags .tag {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.tech-stack .tags .tag:hover {
+  background-color: #91a5ff;
+}
+
+.tech-stack h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.tech-stack .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tech-stack .tags .tag {
+  background-color: #ffffff;
+  border: 3px solid #292b2e;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #292b2e;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.tech-stack .tags .tag:hover {
+  background-color: #bac5ff;
+}
+
 h1 {
   font-weight: 700;
 }

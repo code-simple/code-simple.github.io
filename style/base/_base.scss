@@ -49,3 +49,32 @@ body {
     }
   }
 }
+
+.tech-stack {
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .tag {
+      background-color: #ffffff;
+      border: 3px solid #292b2e;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #292b2e;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #bac5ff;
+      }
+    }
+  }
+}
