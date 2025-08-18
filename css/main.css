@@ -85,6 +85,14 @@ body {
   background-color: #bac5ff;
 }
 
+.more-text {
+  display: none;
+}
+
+.more-text.show {
+  display: inline;
+}
+
 h1 {
   font-weight: 700;
 }

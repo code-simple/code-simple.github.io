@@ -1,11 +1,16 @@
-// Add "Read more" functionality
+// Reusable "Read more" functionality
 document.addEventListener("DOMContentLoaded", () => {
-  const readMoreLink = document.querySelector(".read-more-link");
-  const moreText = document.querySelector(".more-text");
+  const readMoreLinks = document.querySelectorAll(".read-more-link");
 
-  if (readMoreLink && moreText) {
-    readMoreLink.addEventListener("click", function (e) {
+  readMoreLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
+
+      // find the .more-text inside the same parent container
+      const moreText = this.closest(".project-wrapper__text").querySelector(
+        ".more-text"
+      );
+
       if (moreText.style.display === "none" || moreText.style.display === "") {
         moreText.style.display = "inline";
         this.textContent = "Read less";
@@ -14,5 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
         this.textContent = "Read more";
       }
     });
-  }
+  });
 });

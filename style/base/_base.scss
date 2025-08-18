@@ -78,3 +78,11 @@ body {
     }
   }
 }
+
+.more-text {
+  display: none;
+}
+
+.more-text.show {
+  display: inline;
+}
