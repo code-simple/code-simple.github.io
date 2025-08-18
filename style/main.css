@@ -62,7 +62,8 @@ a:hover {
   color: #3314ba;
   -webkit-text-fill-color: #3314ba;
 }
-@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or
+  (-webkit-background-clip: text) {
   .text-color-main {
     background-image: linear-gradient(135deg, #5e70f5 0%, #3314ba 100%);
     -webkit-background-clip: text;
@@ -126,10 +127,11 @@ a:hover {
   -webkit-text-fill-color: #3314ba;
   border: 2px solid transparent;
   -o-border-image: linear-gradient(135deg, #5e70f5 0%, #3314ba 100%);
-     border-image: linear-gradient(135deg, #5e70f5 0%, #3314ba 100%);
+  border-image: linear-gradient(135deg, #5e70f5 0%, #3314ba 100%);
   border-image-slice: 1;
 }
-@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or
+  (-webkit-background-clip: text) {
   .cta-btn--hero {
     background-image: linear-gradient(135deg, #5e70f5 0%, #3314ba 100%);
     -webkit-background-clip: text;
@@ -138,7 +140,8 @@ a:hover {
     color: transparent;
   }
 }
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
   .cta-btn--hero {
     color: #3314ba;
   }
@@ -197,7 +200,8 @@ a:hover {
 
 /* Project Style*/
 .cta-btn--projects {
-  box-shadow: inset 1px 1px 2px 2px rgba(174, 174, 192, 0.15), inset -2px -2px 2px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 1px 1px 2px 2px rgba(174, 174, 192, 0.15),
+    inset -2px -2px 2px rgba(255, 255, 255, 0.7);
   border: 2px solid transparent;
 }
 @media (max-width: 37.5em) {
@@ -234,7 +238,8 @@ a:hover {
   transition: all 0.2s ease-in-out;
   display: inline-block;
 }
-.footer__text a:hover, .footer__text a:active {
+.footer__text a:hover,
+.footer__text a:active {
   color: #5e70f5;
 }
 .footer hr {
@@ -542,7 +547,8 @@ section .row span {
   border-radius: 50px;
   cursor: pointer;
 }
-.scroll-down::before, .scroll-down::after {
+.scroll-down::before,
+.scroll-down::after {
   height: 10px;
   width: 10px;
   content: "";
@@ -665,7 +671,8 @@ section .row span {
 }
 #projects .project-wrapper__image .thumbnail {
   border: none;
-  box-shadow: 8px 8px 9px 7px rgba(174, 174, 192, 0.4), -5px -5px 15px 7px #ffffff;
+  box-shadow: 8px 8px 9px 7px rgba(174, 174, 192, 0.4),
+    -5px -5px 15px 7px #ffffff;
 }
 #projects .project-wrapper__image .thumbnail .img-fluid {
   width: 100%;
@@ -680,4 +687,4 @@ section .row span {
     margin-bottom: 3.2rem;
     transform: none;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
