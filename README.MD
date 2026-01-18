@@ -1,2 +1,2 @@
--- To compile sass
-sass style/main.scss css/main.css
+npm run build
+npm run deploy
