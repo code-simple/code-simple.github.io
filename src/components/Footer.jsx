@@ -100,10 +100,9 @@ const Footer = () => {
           </div>
 
           {/* Footer Text */}
-          <div className="text-center   w-full">
+          <div className="text-center  w-full">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Imran Khan Porfolio. All rights
-              reserved.
+              © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
         </div>

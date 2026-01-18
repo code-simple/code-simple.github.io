@@ -10,14 +10,16 @@ import Skills from "./components/sections/Skills";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white text-black">
+      <div className="min-h-screen bg-white text-black flex flex-col">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<WorkExperience />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<WorkExperience />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
