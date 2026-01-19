@@ -9,17 +9,17 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-1/2">
-              <h1 className="text-5xl md:text-4xl font-bold mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-5xl md:text-4xl font-bold mb-6 leading-tight ">
                 <span className="block">Hi, I'm Imran Khan</span>
                 <span className="block">
                   Fullstack Developer turning ideas into powerful web solutions.
                 </span>
               </h1>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-8 sm:gap-4">
                 <Link
                   to="/experience"
-                  className="px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
+                  className="py-4 px-2 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
                 >
                   Work Experience
                 </Link>
