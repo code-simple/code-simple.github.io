@@ -172,7 +172,7 @@ const WorkExperience = () => {
               className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow hover:border-primary-500"
             >
               {/* Company Header */}
-              <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6">
+              <div className="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div>
                     <h2 className="text-3xl font-bold mb-2">
@@ -278,7 +278,7 @@ const WorkExperience = () => {
                 >
                   <div className="flex justify-between items-center">
                     <p className="font-bold text-white">{lang.name}</p>
-                    <span className="px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-full text-sm font-medium border border-primary-500">
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full text-sm font-medium border border-primary-500">
                       {lang.level}
                     </span>
                   </div>

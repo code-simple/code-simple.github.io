@@ -44,7 +44,7 @@ const Resume = () => {
 
         {/* Resume Preview Section */}
         <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700">
-          <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6">
+          <div className="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-6">
             <h2 className="text-2xl font-bold">Resume Preview</h2>
           </div>
 
