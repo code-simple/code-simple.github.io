@@ -58,9 +58,9 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-900 to-black text-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col items-end pt-8 pr-4">
+        <div className="flex flex-col items-center sm:items-end pt-8 pr-4">
           {/* Social Media Icons */}
-          <div className="flex gap-6">
+          <div className="flex gap-6 py-4">
             {socialLinks.map((link) => {
               let hoverClass = "";
               switch (link.name) {
