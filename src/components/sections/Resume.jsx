@@ -9,19 +9,19 @@ const Resume = () => {
     "https://drive.google.com/file/d/1_DQ4TjSRfUB6WWEPS9iNKl0kHTwOrMFl/preview";
 
   return (
-    <main className="py-20 px-4 bg-gradient-to-br from-slate-50 to-gray-100 min-h-screen">
+    <main className="py-20 px-4 bg-gradient-to-br from-gray-800 to-gray-900 min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="max-w-6xl mx-auto">
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-between mb-6">
-            <h2 className="text-4xl font-bold  text-gray-900">RESUME</h2>
+            <h2 className="text-4xl font-bold text-white">RESUME</h2>
             <a
               href={resumeDownloadLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="py-2 px-4 bg-blue-600 text-white 
-              font-semibold hover:bg-blue-700 transition-colors 
+              className="py-2 px-4 bg-primary-600 text-white 
+              font-semibold hover:bg-primary-700 transition-colors 
               rounded-lg flex items-center justify-center gap-2"
             >
               <svg
@@ -43,14 +43,14 @@ const Resume = () => {
         </div>
 
         {/* Resume Preview Section */}
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-          <div className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-6">
+        <div className="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6">
             <h2 className="text-2xl font-bold">Resume Preview</h2>
           </div>
 
           {/* Preview Container */}
           <div className="p-6">
-            <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden border border-gray-300 hover:shadow-lg transition-shadow">
+            <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden border border-gray-600 hover:shadow-lg transition-shadow">
               <iframe
                 src={resumePreviewLink}
                 title="Resume Preview"
@@ -60,8 +60,8 @@ const Resume = () => {
             </div>
 
             {/* Preview Info */}
-            <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-blue-900 text-sm">
+            <div className="mt-6 p-4 bg-primary-900 border border-primary-700 rounded-lg">
+              <p className="text-primary-100 text-sm">
                 <span className="font-semibold">💡 Tip:</span> You can scroll
                 through the preview above or download the PDF for offline
                 viewing.

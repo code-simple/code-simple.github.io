@@ -10,7 +10,7 @@ import Skills from "./components/sections/Skills";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white text-black flex flex-col">
+      <div className="min-h-screen bg-gray-950 text-white flex flex-col">
         <Navbar />
         <div className="flex-1">
           <Routes>

@@ -5,13 +5,13 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900 min-h-screen">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-1/2">
-              <h1 className="text-2xl sm:text-5xl md:text-4xl font-bold mb-6 leading-tight ">
+              <h1 className="text-2xl sm:text-5xl md:text-4xl font-bold mb-6 leading-tight text-white">
                 <span className="block">Hi, I'm Imran Khan</span>
-                <span className="block">
+                <span className="block text-primary-400">
                   Fullstack Developer turning ideas into powerful web solutions.
                 </span>
               </h1>
@@ -19,7 +19,7 @@ const Home = () => {
               <div className="flex flex-wrap gap-8 sm:gap-4">
                 <Link
                   to="/experience"
-                  className="py-4 px-2 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
+                  className="py-4 px-2 bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors"
                 >
                   Work Experience
                 </Link>
@@ -27,7 +27,7 @@ const Home = () => {
                   href="https://github.com/code-simple"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-3 border-2 border-black text-black font-medium hover:bg-gray-50 transition-colors flex items-center gap-2"
+                  className="px-8 py-3 border-2 border-primary-400 text-primary-400 font-medium hover:bg-primary-600 hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg
                     className="w-5 h-5"
