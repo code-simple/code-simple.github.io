@@ -23,7 +23,7 @@ const Navbar = () => {
                 to="/"
                 className="text-2xl text-white font-bold tracking-tight"
               >
-                Portfolio
+                Imran Khan
               </Link>
             </div>
 
