@@ -278,7 +278,10 @@ const WorkExperience = () => {
                 >
                   <div className="flex justify-between items-center">
                     <p className="font-bold text-white">{lang.name}</p>
-                    <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full text-sm font-medium border border-primary-500">
+                    <span
+                      className="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 
+                    text-white rounded-full text-sm font-medium border border-blue-400"
+                    >
                       {lang.level}
                     </span>
                   </div>
