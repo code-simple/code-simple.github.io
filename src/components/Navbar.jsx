@@ -6,52 +6,52 @@ const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Skills", path: "/skills" },
-    { name: "Experience", path: "/experience" },
-    { name: "Resume", path: "/resume" },
+    { name: "Home", path: "/", icon: "~/" },
+    { name: "Skills", path: "/skills", icon: "</>" },
+    { name: "Experience", path: "/experience", icon: "{}" },
+    { name: "Resume", path: "/resume", icon: "[]" },
   ];
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-slate-800 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4  ">
-          <div className="flex justify-between h-16">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link
-                to="/"
-                className="text-2xl text-white font-bold tracking-tight"
-              >
-                Imran Khan
-              </Link>
+      <nav className="sticky top-0 z-50 bg-dark-surface/95 backdrop-blur border-b border-dark-border">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between h-14">
+            <Link to="/" className="flex items-center gap-2 group">
+              <span className="text-accent-green font-bold text-sm">
+                ~/imran-khan
+              </span>
+            </Link>
+
+            <div className="hidden md:flex items-center gap-1">
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`px-3 py-1.5 text-xs font-medium transition-colors relative ${
+                      isActive ? "text-accent-blue" : "text-muted hover:text-fg"
+                    }`}
+                  >
+                    <span className="text-accent-purple">{item.icon}</span>
+                    <span className="ml-1">{item.name.toLowerCase()}</span>
+                    {isActive && (
+                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-accent-blue rounded-full" />
+                    )}
+                  </Link>
+                );
+              })}
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`text-sm font-medium transition-colors ${
-                    location.pathname === item.path
-                      ? "text-white border-b-2 border-white"
-                      : "text-gray-200 hover:text-white"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white hover:text-gray-200 focus:outline-none transition-colors"
+                className="text-muted hover:text-fg transition-colors p-1"
+                aria-label="Toggle menu"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -78,35 +78,38 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Navigation Dropdown */}
       {isOpen && (
         <div
-          className="fixed inset-0 top-16 md:hidden z-40"
+          className="fixed inset-0 top-14 md:hidden z-40 bg-dark-bg/80 backdrop-blur-sm"
           onClick={() => setIsOpen(false)}
         />
       )}
       <div
-        className={`md:hidden fixed left-0 right-0 top-16 z-40 bg-slate-800 border-b border-gray-700 shadow-lg transition-all duration-300 ease-in-out transform ${
+        className={`md:hidden fixed left-0 right-0 top-14 z-40 bg-dark-surface border-b border-dark-border transition-all duration-200 ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 max-w-7xl mx-auto">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                location.pathname === item.path
-                  ? "text-white bg-slate-700"
-                  : "text-gray-200 hover:text-white hover:bg-slate-700"
-              }`}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`block px-3 py-2 rounded text-xs font-medium transition-colors ${
+                  isActive
+                    ? "text-accent-blue bg-dark-selection"
+                    : "text-muted hover:text-fg hover:bg-dark-line"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                <span className="text-accent-purple">{item.icon}</span>
+                <span className="ml-1.5">{item.name.toLowerCase()}</span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>

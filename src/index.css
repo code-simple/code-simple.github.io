@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  }
+
+  body {
+    @apply bg-dark-bg text-fg antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-blue;
+  }
+
+  ::selection {
+    @apply bg-dark-selection text-fg-white;
+  }
+}
+
+@layer components {
+  .terminal-line {
+    @apply border-l-2 border-muted pl-4;
+  }
+
+  .code-tag {
+    @apply text-accent-red;
+  }
+
+  .code-attr {
+    @apply text-accent-yellow;
+  }
+
+  .code-value {
+    @apply text-accent-green;
+  }
+
+  .code-fn {
+    @apply text-accent-blue;
+  }
+
+  .code-keyword {
+    @apply text-accent-purple;
+  }
+
+  .code-class {
+    @apply text-accent-yellow;
+  }
+
+  .code-comment {
+    @apply text-muted italic;
+  }
+}

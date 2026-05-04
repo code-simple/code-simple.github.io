@@ -130,21 +130,10 @@ const WorkExperience = () => {
   ];
 
   const certifications = [
-    {
-      name: "Responsive Web Design",
-      issuer: "FreeCodeCamp",
-      date: "April 2023",
-    },
-    {
-      name: "Learn Node.js From Scratch",
-      issuer: "Codedamn",
-      date: "May 2023",
-    },
+    { name: "Responsive Web Design", issuer: "FreeCodeCamp", date: "April 2023" },
+    { name: "Learn Node.js From Scratch", issuer: "Codedamn", date: "May 2023" },
     { name: "Git Masterclass", issuer: "Codedamn", date: "April 2023" },
-    {
-      name: "Relational Databases including PostgreSQL, Bash, and Git",
-      issuer: "FreeCodeCamp",
-    },
+    { name: "Relational Databases including PostgreSQL, Bash, and Git", issuer: "FreeCodeCamp" },
     { name: "Back End Development and APIs", issuer: "FreeCodeCamp" },
   ];
 
@@ -155,59 +144,56 @@ const WorkExperience = () => {
   ];
 
   return (
-    <main className="py-20 px-4 bg-gradient-to-br from-gray-800 to-gray-900 min-h-screen">
+    <main className="min-h-[calc(100vh-3.5rem)] py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className=" mb-10">
-          <h1 className="text-4xl font-bold mb-8 text-white">
-            WORK EXPERIENCE
-          </h1>
+        <div className="mb-10">
+          <h2 className="text-3xl font-bold text-fg-white">
+            Work <span className="text-accent-blue">Experience</span>
+          </h2>
         </div>
 
-        {/* Experience Cards */}
-        <div className="space-y-8 mb-20">
+        <div className="space-y-6 mb-20">
           {experiences.map((company, index) => (
             <div
               key={index}
-              className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow hover:border-primary-500"
+              className="bg-dark-surface border border-dark-border rounded-lg overflow-hidden hover:border-muted transition-colors"
             >
-              {/* Company Header */}
-              <div className="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div>
-                    <h2 className="text-3xl font-bold mb-2">
-                      {company.company}
-                    </h2>
-                    <p className="text-gray-300 text-lg">
-                      {company.location} • {company.period}
-                    </p>
-                  </div>
+              <div className="border-b border-dark-border px-5 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <div>
+                  <span className="text-fg-white font-semibold text-sm">
+                    {company.company}
+                  </span>
+                  <span className="text-muted text-xs ml-2">
+                    {company.location}
+                  </span>
                 </div>
+                <span className="text-xs text-accent-blue">{company.period}</span>
               </div>
 
-              {/* Roles */}
-              <div className="p-6 space-y-8">
+              <div className="p-5 space-y-6">
                 {company.roles.map((role, roleIndex) => (
-                  <div
-                    key={roleIndex}
-                    className="border-l-4 border-primary-500 pl-6"
-                  >
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      {role.title}
-                    </h3>
-                    <p className="text-lg font-semibold text-primary-400 mb-3">
-                      {role.project}
+                  <div key={roleIndex} className="terminal-line">
+                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
+                      <h3 className="text-fg-white font-semibold text-sm">
+                        {role.title}
+                      </h3>
+                      <span className="text-accent-blue text-xs font-medium">
+                        {role.project}
+                      </span>
+                    </div>
+                    <p className="text-muted-light text-xs leading-relaxed mb-4">
+                      {role.description}
                     </p>
-                    <p className="text-gray-200 mb-4">{role.description}</p>
 
-                    {/* Tech Stack */}
                     <div className="mb-4">
-                      <p className="font-bold text-white mb-2">Tech Stack:</p>
+                      <p className="text-xs text-muted mb-2">
+                        <span className="code-comment">{'// tech stack'}</span>
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {role.techStack.map((tech, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full text-sm font-medium border border-blue-400"
+                            className="px-2 py-0.5 bg-dark-bg text-xs text-accent-green rounded border border-dark-border"
                           >
                             {tech}
                           </span>
@@ -215,18 +201,15 @@ const WorkExperience = () => {
                       </div>
                     </div>
 
-                    {/* Achievements */}
                     <div>
-                      <p className="font-bold text-white mb-2">
-                        Key Achievements:
+                      <p className="text-xs text-muted mb-2">
+                        <span className="code-comment">{'// achievements'}</span>
                       </p>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1.5">
                         {role.achievements.map((achievement, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="text-primary-400 mr-3 font-bold">
-                              ✓
-                            </span>
-                            <span className="text-gray-300">{achievement}</span>
+                          <li key={i} className="flex items-start text-xs">
+                            <span className="text-accent-green mr-2 mt-0.5">✓</span>
+                            <span className="text-fg">{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -238,26 +221,19 @@ const WorkExperience = () => {
           ))}
         </div>
 
-        {/* Skills Section */}
-
-        {/* Certifications and Languages Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Certifications */}
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-8">
-            <h2 className="text-2xl font-bold mb-6 text-white pb-3 border-b-2 border-primary-500">
-              CERTIFICATIONS
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="bg-dark-surface border border-dark-border rounded-lg p-5">
+            <h2 className="text-sm font-semibold text-fg-white mb-4 pb-3 border-b border-dark-border">
+              <span className="text-accent-blue">Certifications</span>
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {certifications.map((cert, i) => (
-                <div
-                  key={i}
-                  className="pb-4 border-b border-gray-700 last:border-b-0"
-                >
-                  <p className="font-bold text-white">{cert.name}</p>
+                <div key={i} className="pb-3 border-b border-dark-border last:border-b-0 last:pb-0">
+                  <p className="text-xs text-fg">{cert.name}</p>
                   <div className="flex justify-between mt-1">
-                    <span className="text-gray-400">{cert.issuer}</span>
+                    <span className="text-xs text-accent-blue">{cert.issuer}</span>
                     {cert.date && (
-                      <span className="text-gray-400 text-sm">{cert.date}</span>
+                      <span className="text-xs text-muted">{cert.date}</span>
                     )}
                   </div>
                 </div>
@@ -265,26 +241,17 @@ const WorkExperience = () => {
             </div>
           </div>
 
-          {/* Languages */}
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-8">
-            <h2 className="text-2xl font-bold mb-6 text-white pb-3 border-b-2 border-primary-500">
-              LANGUAGES
+          <div className="bg-dark-surface border border-dark-border rounded-lg p-5">
+            <h2 className="text-sm font-semibold text-fg-white mb-4 pb-3 border-b border-dark-border">
+              <span className="text-accent-blue">Languages</span>
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {languages.map((lang, i) => (
-                <div
-                  key={i}
-                  className="pb-4 border-b border-gray-700 last:border-b-0"
-                >
-                  <div className="flex justify-between items-center">
-                    <p className="font-bold text-white">{lang.name}</p>
-                    <span
-                      className="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 
-                    text-white rounded-full text-sm font-medium border border-blue-400"
-                    >
-                      {lang.level}
-                    </span>
-                  </div>
+                <div key={i} className="flex justify-between items-center pb-3 border-b border-dark-border last:border-b-0 last:pb-0">
+                  <span className="text-xs text-fg">{lang.name}</span>
+                  <span className="px-2 py-0.5 bg-dark-bg text-xs text-accent-green rounded border border-dark-border">
+                    {lang.level}
+                  </span>
                 </div>
               ))}
             </div>
