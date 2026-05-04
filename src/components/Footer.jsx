@@ -38,9 +38,7 @@ const Footer = () => {
       href: "https://wa.me/+923001523232",
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          className="w-6 h-6"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
