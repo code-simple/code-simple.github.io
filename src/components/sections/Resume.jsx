@@ -2,9 +2,9 @@ import React from "react";
 
 const Resume = () => {
   const resumeDownloadLink =
-    "https://drive.google.com/uc?export=download&id=1_DQ4TjSRfUB6WWEPS9iNKl0kHTwOrMFl";
+    "https://drive.google.com/uc?export=download&id=1C90wa9SMV0hsiaRdGixReIfcQUkNXZfB";
   const resumePreviewLink =
-    "https://drive.google.com/file/d/1_DQ4TjSRfUB6WWEPS9iNKl0kHTwOrMFl/preview";
+    "https://drive.google.com/file/d/1C90wa9SMV0hsiaRdGixReIfcQUkNXZfB/preview";
 
   return (
     <main className="min-h-[calc(100vh-3.5rem)] py-16 px-4">

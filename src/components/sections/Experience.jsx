@@ -8,26 +8,6 @@ const WorkExperience = () => {
       period: "January 2019 - Present",
       roles: [
         {
-          title: "Full Stack Developer",
-          project: "Bracket Boss",
-          description:
-            "Built Bracket Boss, a league and tournament management platform for pickleball. Worked on scheduling systems, tournament brackets, payments, messaging, and real-time standings. Developed a comprehensive admin panel and deployed the application on AWS with a focus on scalability and performance.",
-          techStack: [
-            "Next.js",
-            "Tailwind CSS",
-            "NestJS",
-            "GraphQL",
-            "PostgreSQL",
-            "AWS",
-          ],
-          achievements: [
-            "Worked on scheduling systems and tournament brackets",
-            "Integrated payments and real-time messaging",
-            "Developed comprehensive admin panel",
-            "Deployed on AWS with focus on scalability and performance",
-          ],
-        },
-        {
           title: "Backend Developer",
           project: "LivelyPencil",
           description:
@@ -43,6 +23,33 @@ const WorkExperience = () => {
             "Developed REST APIs and custom reels-style content system",
             "Implemented live streaming and instant user interactions using Socket.io",
             "Containerized services using Docker",
+          ],
+        },
+      ],
+    },
+    {
+      company: "Bracket Boss",
+      location: "Freelance",
+      period: "Freelance Project",
+      roles: [
+        {
+          title: "Full Stack Developer",
+          project: "League & Tournament Management Platform",
+          description:
+            "Built Bracket Boss, a league and tournament management platform for pickleball. Worked on scheduling systems, tournament brackets, payments, messaging, and real-time standings. Developed a comprehensive admin panel and deployed the application on AWS with a focus on scalability and performance.",
+          techStack: [
+            "Next.js",
+            "Tailwind CSS",
+            "NestJS",
+            "GraphQL",
+            "PostgreSQL",
+            "AWS",
+          ],
+          achievements: [
+            "Worked on scheduling systems and tournament brackets",
+            "Integrated payments and real-time messaging",
+            "Developed comprehensive admin panel",
+            "Deployed on AWS with focus on scalability and performance",
           ],
         },
       ],
