@@ -10,6 +10,7 @@ const WorkExperience = () => {
         {
           title: "Backend Developer",
           project: "LivelyPencil",
+          projectUrl: "https://play.google.com/store/apps/details?id=com.forcod.livelypencilapp&hl=en",
           description:
             "Worked on the backend of a real-time creative community platform. Developed REST APIs and a custom reels-style content system. Implemented real-time features such as live streaming and instant user interactions using Socket.io. Containerized services using Docker.",
           techStack: [
@@ -29,6 +30,7 @@ const WorkExperience = () => {
     },
     {
       company: "Bracket Boss",
+      url: "https://www.bracketboss.app",
       location: "Freelance",
       period: "Freelance Project",
       roles: [
@@ -56,6 +58,7 @@ const WorkExperience = () => {
     },
     {
       company: "OneFlow",
+      url: "https://one-flow.vercel.app",
       location: "Freelance",
       period: "Freelance Project",
       roles: [
@@ -84,6 +87,7 @@ const WorkExperience = () => {
     },
     {
       company: "FCE",
+      url: "https://fce-technologies.com/",
       location: "Freelance",
       period: "Freelance Project",
       roles: [
@@ -167,9 +171,20 @@ const WorkExperience = () => {
             >
               <div className="border-b border-dark-border px-5 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div>
-                  <span className="text-fg-white font-semibold text-sm">
-                    {company.company}
-                  </span>
+                  {company.url ? (
+                    <a
+                      href={company.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent-blue font-semibold text-sm hover:underline"
+                    >
+                      {company.company}
+                    </a>
+                  ) : (
+                    <span className="text-fg-white font-semibold text-sm">
+                      {company.company}
+                    </span>
+                  )}
                   <span className="text-muted text-xs ml-2">
                     {company.location}
                   </span>
@@ -184,9 +199,20 @@ const WorkExperience = () => {
                       <h3 className="text-fg-white font-semibold text-sm">
                         {role.title}
                       </h3>
-                      <span className="text-accent-blue text-xs font-medium">
-                        {role.project}
-                      </span>
+                      {role.projectUrl ? (
+                        <a
+                          href={role.projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent-blue text-xs font-medium hover:underline"
+                        >
+                          {role.project}
+                        </a>
+                      ) : (
+                        <span className="text-accent-blue text-xs font-medium">
+                          {role.project}
+                        </span>
+                      )}
                     </div>
                     <p className="text-muted-light text-xs leading-relaxed mb-4">
                       {role.description}
