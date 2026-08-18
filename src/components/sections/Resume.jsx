@@ -2,9 +2,9 @@ import React from "react";
 //https://drive.google.com/file/d/1dX2pm2XpMJWEBjmS1pKWixa_YGHgfyLg/view?usp=sharing
 const Resume = () => {
   const resumeDownloadLink =
-    "https://drive.google.com/uc?export=download&id=1dX2pm2XpMJWEBjmS1pKWixa_YGHgfyLg";
+    "https://drive.google.com/uc?export=download&id=1Njg6N38B5H-u4KMamkBRvn9Km7cE6XL4";
   const resumePreviewLink =
-    "https://drive.google.com/file/d/1dX2pm2XpMJWEBjmS1pKWixa_YGHgfyLg/preview";
+    "https://drive.google.com/file/d/1Njg6N38B5H-u4KMamkBRvn9Km7cE6XL4/preview";
 
   return (
     <main className="min-h-[calc(100vh-3.5rem)] py-16 px-4">
