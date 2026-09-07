@@ -39,9 +39,7 @@ const Resume = () => {
             <span className="w-3 h-3 rounded-full bg-accent-red" />
             <span className="w-3 h-3 rounded-full bg-accent-yellow" />
             <span className="w-3 h-3 rounded-full bg-accent-green" />
-            <span className="ml-2 text-xs text-muted">
-              resume.pdf — preview
-            </span>
+            <span className="ml-2 text-xs text-muted"> </span>
           </div>
 
           <div className="p-4">

@@ -23,7 +23,7 @@ const Home = () => {
 
               <h2 className="text-lg sm:text-xl text-muted-light font-medium">
                 <span className="text-accent-yellow">Full Stack Developer</span>
-                <span className="text-muted"> — </span>
+                <span className="text-muted"> </span>
                 <span className="text-fg">
                   turning ideas into powerful web solutions
                 </span>
